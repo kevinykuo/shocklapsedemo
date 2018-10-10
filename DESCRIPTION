@@ -1,0 +1,27 @@
+Package: shocklapsedemo
+Type: Package
+Title: Shock Lapse Modeling with Machine Learning
+Version: 0.1.0
+Authors@R: c(
+  person("Kevin", "Kuo", role = c("aut", "cre"), email = "kevinykuo@gmail.com"),
+  person("Frankie", "Logan", role = c("aut"), email = "frankietang94@gmail.com")
+  )
+Description: Companion package for the talk 
+    'Deep Learning Applications: Policyholder Behavior Modeling and Beyond' at the
+    Society of Actuaries Annual Meeting 2018 in Nashville.
+License: Apache License (>= 2.0)
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.0
+Depends:
+    R (>= 3.2)
+Imports: 
+  purrr,
+  dplyr,
+  keras,
+  ggplot2,
+  recipes,
+  Matrix,
+  rlang,
+  tidyr,
+  xgboost
