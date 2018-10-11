@@ -53,17 +53,17 @@ keras_model_lapse <- function() {
   concat_inputs <- layer_concatenate(list(
     input_gender,
     input_issue_age_group %>%
-      layer_embedding(7, 2) %>%
+      layer_embedding(7, 6, name = "issue_age_embedding") %>%
       layer_flatten(),
     input_face_amount_band %>%
-      layer_embedding(4, 2) %>%
+      layer_embedding(4, 3, name = "face_amount_embedding") %>%
       layer_flatten(),
     input_post_level_premium_structure,
     input_prem_jump_d11_d10 %>%
-      layer_embedding(25, 24) %>%
+      layer_embedding(25, 24, name = "premium_jump_embedding") %>%
       layer_flatten(),
     input_risk_class %>%
-      layer_embedding(9, 2) %>%
+      layer_embedding(9, 8, name = "risk_class_embedding") %>%
       layer_flatten(),
     input_premium_mode
   ))
