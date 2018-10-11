@@ -28,7 +28,7 @@ compute_prediction_quantiles <- function(predictions, predicted_col, actual_col)
 plot_actual_vs_expected <- function(df) {
   df %>%
     tidyr::gather("key", "value", -"decile") %>%
-    ggplot2::ggplot(ggplot2::aes(x = decile, y = value, fill = key)) +
+    ggplot2::ggplot(ggplot2::aes(x = .data$decile, y = .data$value, fill = .data$key)) +
     ggplot2::geom_bar(stat = "identity", position = "dodge") +
     ggplot2::ggtitle("Average Actual vs. Predicted Lapse Rates") +
     ggplot2::xlab("Actual Lapse Rate Decile") +
