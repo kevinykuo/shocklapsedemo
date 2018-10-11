@@ -10,7 +10,7 @@ predictions_averages <- training %>%
             predicted_amount_rate = sum(lapse_amount) / sum(exposure_amount)) %>%
   right_join(validation)
 
-metrics(predictions_averages, lapse_count_rate, predicted_count_rate)
+metrics(as.data.frame(predictions_averages), lapse_count_rate, predicted_count_rate)
 
 # Evaluate on testing
 
@@ -22,4 +22,4 @@ predictions_averages <- bind_rows(training, validation) %>%
             predicted_amount_rate = sum(lapse_amount) / sum(exposure_amount)) %>%
   right_join(testing)
 
-metrics(predictions_averages, lapse_count_rate, predicted_count_rate)
+metrics(as.data.frame(predictions_averages), lapse_count_rate, predicted_count_rate)
