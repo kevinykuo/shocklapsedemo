@@ -1,4 +1,4 @@
-library(shocklapse)
+library(shocklapsedemo)
 library(tidyverse)
 library(yardstick)
 library(xgboost)
