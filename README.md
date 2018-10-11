@@ -1,3 +1,5 @@
+[![Travis build status](https://travis-ci.org/kevinykuo/shocklapsedemo.svg?branch=master)](https://travis-ci.org/kevinykuo/shocklapsedemo)
+
 # shocklapsedemo
 
 This is the companion package to the session "Deep Learning Applications: Policyholder Behavior Modeling and Beyond" at the 2018 Society of Actuaries Annual Meeting in Nashville. 
