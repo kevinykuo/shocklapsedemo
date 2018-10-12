@@ -50,7 +50,7 @@ explainer_glm <- DALEX::explain(
 )
 
 
-newdata <- validation[7843,] %>% select(predictors)
+newdata <- validation[53,] %>% select(predictors)
 
 # Prediction breakdown
 
